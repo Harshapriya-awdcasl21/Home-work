@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+ 
+
+ class Harshad
+
+ {
+
+   public static void main(String args[])
+
+   { 
+
+   Scanner s=new Scanner(System.in);
+
+   System.out.println("Enter a number:");
+
+   int n=s.nextInt();
+
+   int p=n;
+
+  int a,b=0;
+
+  while(n>0){
+
+    a=n%10;
+
+    b+=a;
+
+    n/=10;
+
+  }
+
+  if((p%b)==0)
+
+     System.out.println(p+" is a Harshad number");
+
+  else
+
+     System.out.println(p+" is not a Harshad number");
+
+   }
+
+ }
+
+
+
+Output 1:
+
+Enter a number:
+
+156
+
+156 is an Harshad number.
+
+Output 2:
+
+Enter a number:
+
+16
+
+16 is an Harshad number
