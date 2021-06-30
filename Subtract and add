@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class Solution{
+
+  static public int subtractProductAndSum(int n){
+
+    int rem,sum=0,t=1;
+
+    while(n>0){
+
+      rem=n%10;
+
+      sum+=rem;
+
+      t*=rem;
+
+      n/=10;
+
+    }
+
+    return (t-sum);
+
+  }
+
+  public static void main(String arg[]){
+
+    Scanner s= new Scanner(System.in);
+
+    int x=s.nextInt();
+
+    System.out.println(subtractProductAndSum(x));
+
+  }
+
+}
+
+ 
+
+ 
