@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+ class replace
+
+ {
+
+   public static void main(String args[])
+
+   { 
+
+    Scanner sc=new Scanner(System.in);
+
+    System.out.println("Enter a number:");
+
+    Integer n=sc.nextInt();
+
+    System.out.println("Enter 2 values for replacing");
+
+   Integer a=sc.nextInt();
+
+   Integer b=sc.nextInt();
+
+    String s=n.toString();
+
+    String x=a.toString();
+
+    String y=b.toString();
+
+    String z=s.replace(x,y);
+
+    System.out.println("After replacing: "+z);
+
+    
+
+    
+
+   }
+
+ }
+Output:
+Enter a number:
+
+456464
+
+Enter 2 values for replacing
+
+4
+
+5
+
+After replacing: 556565
+
+Process finished.
