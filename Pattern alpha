@@ -1,0 +1,62 @@
+import java.util.*;
+
+ // Compiler version JDK 11.0.2
+
+ class pattern_alpha
+
+ {
+
+   public static void main(String args[])
+
+   { 
+
+     Scanner k=new Scanner(System.in);
+
+     System.out.println("Enter no.of rows :");
+
+     int n=k.nextInt();
+
+    char c='A';
+
+     for(int i=0;i<=n;i++)
+
+     {
+
+       for(int j=1;j<=i;j++)
+
+       {
+
+         System.out.print(c);
+
+         c++;
+
+       }
+
+       System.out.println();
+
+      }
+
+   }
+
+ }
+
+Output:
+Enter no.of rows :
+
+5
+
+A
+
+BC
+
+DEF
+
+GHIJ
+
+KLMNO
+
+Process finished.
+
+
+
+
