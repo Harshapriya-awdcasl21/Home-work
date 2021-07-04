@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class automorphic
+
+ {
+
+   public static void main(String args[])
+
+   { 
+
+     Scanner sp= new Scanner(System.in);
+
+     int num= sp.nextInt();
+
+     int a= num*num;
+
+     if((num%10)==(a%10))
+
+     System.out.println(num+" is automorphic");
+
+     else
+
+     System.out.println(num+" is not automorphic");
+
+   }
+
+ }
+ 
+ Output1:
+ 
+ 56
+
+56 is automorphic
+
+Process finished.
+
+Output2:
+44
+
+44 is not automorphic
+
+Process finished.
