@@ -1,0 +1,82 @@
+ // Compiler version JDK 11.0.2
+
+ import java.util.*;
+
+class arrsortodd
+
+{
+
+public static void main(String arg[])
+
+{
+
+  Scanner k= new Scanner(System.in);
+
+  System.out.println("Enter size of array");
+
+  int n=k.nextInt();
+
+int a[]=new int[n];
+
+System.out.println("Enter array elements");
+
+for(int i=0;i<n;i++)
+
+a[i]=k.nextInt();
+
+System.out.println("You're array is:");
+
+for(int i:a)
+
+System.out.print(i+" \n");
+
+Arrays.sort(a);
+
+System.out.println(" odd elements are:");
+
+for(int i=0;i<n;i++){
+
+  if(a[i]%2!=0)
+
+  System.out.println(a[i]);
+
+}
+
+}
+
+}
+
+
+Output:
+
+Enter size of array
+
+4
+
+Enter array elements
+
+5
+
+6
+
+7
+
+8
+
+You're array is:
+
+5 
+
+6 
+
+7 
+
+8 
+
+ odd elements are:
+
+5
+
+7
+
+Process finished.
