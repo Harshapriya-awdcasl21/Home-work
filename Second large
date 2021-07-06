@@ -1,0 +1,54 @@
+import java.util.*;
+
+// Compiler version JDK 11.0.2
+
+ class large2nd
+
+ {
+
+   public static void main(String args[])
+
+   { 
+
+    Scanner k= new Scanner(System.in);
+
+    System.out.println("Enter size of array");
+
+    int n=k.nextInt();
+
+    int a[]= new int[n];
+
+    System.out.println("Enter array elements");
+
+    for(int i=0;i<n;i++)
+
+    a[i]=k.nextInt();
+
+    Arrays.sort(a);
+
+    System.out.println("second largest element:"+a[n-2]);
+
+   }
+
+ }
+ 
+ Output:
+ Enter size of array
+
+5
+
+Enter array elements
+
+8
+
+3
+
+6
+
+1
+
+5
+
+second largest element:6
+
+Process finished.
