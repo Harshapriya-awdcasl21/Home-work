@@ -1,0 +1,67 @@
+import java.util.*;
+
+ class removeduplicate
+
+ {
+
+   public static void main(String args[])
+
+   { 
+
+    Scanner k= new Scanner(System.in);
+
+    System.out.println("Enter size of array");
+
+    int n=k.nextInt();
+
+    int a[]= new int[n];
+
+    System.out.println("Enter array elements");
+
+    for(int i=0;i<n;i++)
+
+    a[i]=k.nextInt();
+
+    for(int i=0;i<n;i++){
+
+      int count=0;
+
+      for(int j=0;j<i;j++){
+
+        if(a[i]==a[j])
+
+        count++;
+
+      }
+
+      if(count==0)      
+
+      System.out.print(a[i]+" ");
+
+    }
+
+   }
+
+ }
+ 
+ Output:
+ 
+ Enter size of array
+
+5
+
+Enter array elements
+
+4
+
+6
+
+4
+
+7
+
+4
+
+4 6 7 
+
+Process finished.
