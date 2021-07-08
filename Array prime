@@ -1,0 +1,62 @@
+import java.util.*;
+
+ // Compiler version JDK 11.0.2
+
+ class prime
+
+ {
+
+   public static void main(String args[])
+
+   { 
+
+     Scanner k= new Scanner(System.in);
+
+     System.out.println("Enter size of array");
+
+     int n=k.nextInt();
+
+     int a[]= new int[n];     
+
+     System.out.println("Enter array elements");
+
+     for(int i=0;i<n;i++)
+
+     a[i]=k.nextInt();
+
+     System.out.println("array is :");
+
+     for (int i:a)
+
+    System.out.print(i+"\t ");
+
+    System.out.println("\nprime numbers:"); 
+
+    for(int i=0;i<n;i++)
+
+    {int x=0;
+
+      for(int j=2;j<a[i];j++)
+
+      {
+
+        if(a[i]%j==0)
+
+        {
+
+          x++;
+
+        }
+
+      }
+
+      if(x==0)
+
+      System.out.println(a[i]);
+
+    }
+
+   }
+
+ }
+
