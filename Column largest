@@ -1,0 +1,112 @@
+import java.util.*;
+
+public class coloumnlargest
+
+{
+
+  public static void main(String [] args)
+
+  {
+
+    Scanner k= new Scanner(System.in);
+
+    int i,j, largest;
+
+    System.out.println("Enter rows and columns :");
+
+    int x=k.nextInt();
+
+    int y=k.nextInt();
+
+    int arr[][]=new int [x][y];
+
+    System.out.println("Enter "+x*y+" array elements");
+
+   for( i=0;i<x;i++)
+
+   {
+
+     for( j=0;j<y;j++)
+
+     arr[i][j]=k.nextInt();
+
+    }
+
+    System.out.println("array is:");
+
+    for ( i=0;i<x;i++)
+
+    {
+
+      for( j=0;j<y;j++)
+
+      {
+
+        System.out.print(arr[i][j]+" ");
+
+      }
+
+      System.out.println();
+
+    }
+
+    for ( j=0;j<y;j++)
+
+    {
+
+     largest=arr[0][j];
+
+      for( i=0;i<x;i++)
+
+      {
+
+        if(largest<arr[i][j])
+
+        largest=arr[i][j];
+
+      }
+
+      System.out.println("largest value in column "+(j+1)+" is"+largest);
+
+    }
+
+  }
+
+}
+Output:
+Enter rows and columns :
+
+2
+
+3
+
+Enter 6 array elements
+
+5
+
+2
+
+6
+
+8
+
+9
+
+3
+
+array is:
+
+5 2 6 
+
+8 9 3 
+
+largest value in column 1 is8
+
+largest value in column 2 is9
+
+largest value in column 3 is6
+
+Process finished.
+
+
+
