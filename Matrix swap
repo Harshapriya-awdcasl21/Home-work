@@ -1,0 +1,166 @@
+import java.util.*;
+
+ // Compiler version JDK 11.0.2
+
+ class matrixswap
+
+ {
+
+   public static void main(String args[])
+
+   { 
+
+    Scanner sc= new Scanner(System.in);
+
+    System.out.println("Enter rows and columns");
+
+    int r=sc.nextInt(), c=sc.nextInt(),i,j,temp=0;
+
+    int a[][]= new int[r][c];
+
+    int b[][]= new int[r][c];
+
+    System.out.println("Enter matrix a values");
+
+    for( i=0;i<r;i++){
+
+      for( j=0;j<c;j++)
+
+      a[i][j]=sc.nextInt();
+
+    }
+
+    System.out.println("Enter matrix b values");
+
+    for( i=0;i<r;i++){
+
+      for( j=0;j<c;j++)
+
+      b[i][j]=sc.nextInt();
+
+    }
+
+    System.out.println("a before swapping");
+
+    
+
+    for( i=0;i<r;i++){
+
+      for(j=0;j<c;j++)
+
+      System.out.print(a[i][j]+" ");
+
+      System.out.println();
+
+    }
+
+    System.out.println("b before swapping ");
+
+    for(i=0;i<r;i++){
+
+      for(j=0;j<c;j++)
+
+      System.out.print(b[i][j]+" ");
+
+      System.out.println();
+
+    }
+
+    for( i=0;i<r;i++){
+
+      for(j=0;j<c;j++){
+
+      a[i][j]=a[i][j]+b[i][j];
+
+      b[i][j]=a[i][j]-b[i][j];
+
+      a[i][j]=a[i][j]-b[i][j];
+
+      }
+
+    }
+
+    System.out.println("a after swapping");
+
+    for(i=0;i<r;i++){
+
+      for( j=0;j<c;j++)
+
+      System.out.print(a[i][j]+" ");
+
+      System.out.println();
+
+    }
+
+    System.out.println("b after swapping ");
+
+    for(i=0;i<r;i++){
+
+      for( j=0;j<c;j++)
+
+      System.out.print(b[i][j]+" ");
+
+      System.out.println();
+
+    }
+
+   }
+
+ }
+ Output:
+ Enter rows and columns
+
+2
+
+2
+
+Enter matrix a values
+
+5
+
+6
+
+7
+
+3
+
+Enter matrix b values
+
+9
+
+4
+
+6
+
+0
+
+a before swapping
+
+5 6 
+
+7 3 
+
+b before swapping 
+
+9 4 
+
+6 0 
+
+a after swapping
+
+9 4 
+
+6 0 
+
+b after swapping 
+
+5 6 
+
+7 3 
+
+Process finished.
+ 
+ 
+ 
+ 
+ 
