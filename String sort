@@ -1,0 +1,29 @@
+import java.util.*;
+
+class stringsort
+
+{
+
+public static void main(String args[])
+
+{
+
+Scanner k= new Scanner(System.in);
+
+System.out.println("enter a string");
+
+String s= new String(); 
+
+s= k.nextLine();
+
+char ch[]= s.toCharArray();
+
+Arrays.sort(ch); 
+
+String str= new String(ch);
+
+System.out.print(str);
+
+}
+
+}
