@@ -1,0 +1,39 @@
+import java.util.*;
+
+class smalltocaps
+
+{
+
+public static void main(String args[])
+
+{
+
+Scanner k= new Scanner(System.in);
+
+System.out.println("Enter a string");
+
+String s1=k.nextLine();
+
+char ch[]= new char[s1.length()];
+
+ch=s1.toCharArray();
+
+for(int i=0;i<ch.length;i++)
+
+{
+
+  if(i==0)
+
+   ch[i]=Character.toUpperCase(ch[i]);
+
+  else if(ch[i]==' ')
+
+   ch[i+1]=Character.toUpperCase(ch[i+1]);
+
+System.out.print(ch[i]);
+
+}
+
+}
+
+}
