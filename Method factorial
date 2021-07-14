@@ -1,0 +1,77 @@
+import java.util.*;
+
+import java.math.BigInteger;
+
+class factmethod
+
+{
+
+public static void main(String args[])
+
+{
+
+  Scanner k= new Scanner(System.in);
+
+  System.out.println("Enter a positive number");
+
+  int num=k.nextInt();
+
+  if(num<0)
+
+    System.out.println("factorial not possible");
+
+   else if(num==0)
+
+      System.out.println("1");
+
+   else
+
+      System.out.println(display(num));
+
+ }
+
+static BigInteger display(int n)
+
+{
+
+  System.out.println("The factorial value of "+n+":"); 
+
+    return fact(n);
+
+}
+
+ static BigInteger fact(int f)
+
+ {
+
+   if(f==1)
+
+   
+
+      return BigInteger.ONE;
+
+   else
+
+      return BigInteger.valueOf(f).multiply(fact(f-1));
+
+ }
+
+}
+
+Output:
+
+Enter a positive number
+
+6
+
+The factorial value of 6:
+
+720
+
+Process finished.
+
+
+
+
+
+
