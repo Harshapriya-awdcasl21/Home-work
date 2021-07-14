@@ -1,0 +1,68 @@
+import java.util.*;
+
+class countwords
+
+{
+
+  public static void main(String args[])
+
+  {
+
+    Scanner k= new Scanner(System.in);
+
+    System.out.println("Enter a string");
+
+    String str = new String();
+
+    str=k.nextLine();
+
+    System.out.println("No.of Words in given string "+wordscount(str));
+
+  }
+
+  static int wordscount(String s1)
+
+ {
+
+  char ch[]= new char[s1.length()];
+
+  ch=s1.toCharArray();
+
+  int l=ch.length;
+
+  int count=1;
+
+  for(int i=0;i<l;i++)
+
+ {
+
+  if((i<l-1)&&(ch[i]==' ')&&(ch[i+1]!=' '))
+
+  count++;
+
+  }
+
+  return count;
+
+ }
+
+}
+
+Output:
+
+Enter a string
+
+my name is rani
+
+No.of Words in given string 4
+
+Process finished.
+
+
+
+
+
+
+
+
+..
