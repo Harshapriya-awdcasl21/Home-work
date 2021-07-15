@@ -1,0 +1,91 @@
+import java.util.*;
+
+class searcharray
+
+{
+
+  public static void main(String arg[])
+
+  {
+
+   Scanner k= new Scanner(System.in);
+
+   System.out.println("Enter size of array");
+
+   int l=k.nextInt();
+
+   int a[]= new int[l];
+
+   System.out.println("Enter elements in array");
+
+   for(int i=0;i<l;i++)
+
+     a[i]=k.nextInt();
+
+   System.out.println("Enter an element to search");
+
+   int s=k.nextInt();
+
+   int f=frequency(a,s);
+
+   System.out.println("The frequency of "+s+" is:"+f);
+
+  }
+
+ static int frequency(int arr[],int search)
+
+ {
+
+   int c=0;
+
+   for(int i=0;i<arr.length;i++)
+
+   {
+
+     if(arr[i]==search)
+
+      c++;
+
+    } 
+
+   return c;
+
+  }
+
+}
+
+
+Output:
+
+Enter size of array
+
+7
+
+Enter elements in array
+
+3
+
+5
+
+7
+
+3
+
+4
+
+9
+
+5
+
+Enter an element to search
+
+3
+
+The frequency of 3 is:2
+
+Process finished.
+
+
+
+
+
