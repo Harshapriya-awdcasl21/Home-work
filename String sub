@@ -1,0 +1,68 @@
+import java.util.*;
+
+class substrings
+
+{
+
+   public static void main(String args[])
+
+  {
+
+    Scanner sc= new Scanner(System.in);
+
+    System.out.println("Enter major string");
+
+    String s1= sc.nextLine();
+
+    System.out.println("Enter substring");
+
+    String s2= sc.nextLine();
+
+    boolean m=sub(s1,s2);
+
+    if(m)
+
+     System.out.println("s2 is substring of s1") ;
+
+     else
+
+       System.out.println("S2 is not a substring of S1");
+
+   }
+
+   static boolean sub(String major, String subs)
+
+   {
+
+    int c=major.indexOf(subs);
+
+     if(c!=-1)
+
+      return true;
+
+     else
+
+       return false;
+
+   }
+
+}
+
+
+Output:
+
+Enter major string
+
+Aditya
+
+Enter substring
+
+it
+
+s2 is substring of s1
+
+Process finished.
+
+
+
+
