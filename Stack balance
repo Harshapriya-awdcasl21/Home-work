@@ -75,9 +75,48 @@ public class stackeven {
 }
 
 
-Output:
+Output 1:
+
+Enter array size:
+
+4
+
+enter elements:
+
+1
+
+2
+
+3
+
+4
+
+Balanced
+
+Process finished.
 
 
+Output 2:
+
+Enter array size:
+
+5
+
+enter elements:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+Not Balanced
+
+Process finished.
 
 
 
