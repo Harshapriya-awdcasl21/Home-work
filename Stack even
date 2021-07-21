@@ -30,13 +30,13 @@ public class stackeven {
 
          {
 
-            if(s.get(i)%2!=0)
+            if(s.get(i)%2==0)
 
             {
 
-              s.remove(i);
+              System.out.print(s.get(i)+" ");
 
-              n--;
+
 
              }
 
