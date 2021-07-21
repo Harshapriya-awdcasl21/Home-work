@@ -1,0 +1,67 @@
+import java.util.*;
+
+import java.util.Scanner;
+
+public class addelement {
+
+    static Stack <Integer> s= new Stack<Integer>();
+
+    static Scanner sc= new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        System.out.println("Enter array size:");
+
+        int n= sc.nextInt();
+
+        int a[]=new int[n];
+
+        System.out.println("enter elements:");
+
+        for(int i=0;i<n;i++) {
+
+           a[i]=sc.nextInt();
+
+        }
+
+         insert(a,n);
+
+         System.out.print(s);
+
+    }
+
+  public static void insert(int a[],int n){
+
+        for(int i=0;i<n;i++)
+
+         s.push(a[i]);
+
+    }
+
+}
+
+Output:
+
+Enter array size:
+
+4
+
+enter elements:
+
+1
+
+2
+
+3
+
+4
+
+[1, 2, 3, 4]
+
+Process finished.
+
+
+
+
+
+
