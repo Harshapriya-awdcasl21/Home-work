@@ -1,0 +1,20 @@
+class MyQueue {
+     Stack<Integer> obj;
+    public MyQueue() {
+      obj=new Stack<Integer>();
+    }
+    public void push(int x) {
+       Collections.reverse(obj);
+        obj.push(x);
+       Collections.reverse(obj); 
+    }
+    public int pop() {
+        return obj.pop();
+    }
+    public int peek() {
+        return obj.peek();
+    }
+    public boolean empty() {
+        return(obj.empty());
+    }
+}
