@@ -20,13 +20,7 @@ public class hashiter {
             String s = (String) it.next();
             System.out.print(s + ",");
         }
-            System.out.println();
-            System.out.println("Displaying keys using Iterator");
-            Iterator it1=hash.keySet().iterator();
-            while(it1.hasNext()){
-                Integer I=(Integer) it1.next();
-                System.out.print(I+",");
-            }
+            
         }
     }
     Output:
@@ -39,8 +33,7 @@ Enter elements in array
 6
 Displaying values using Iterator
 2,4,5,6,
-Displaying keys using Iterator
-0,1,2,3,
+
 Process finished with exit code 0
     
     
