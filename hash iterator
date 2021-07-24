@@ -1,0 +1,46 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class hashiter {
+    public static void main(String[] args) {
+        Scanner k = new Scanner(System.in);
+        System.out.println("Enter size of array");
+        int n = k.nextInt();
+        String arr[] = new String[n];
+        HashMap<Integer,String> hash = new HashMap<>();
+        System.out.println("Enter elements in array");
+        for (int i = 0; i < n; i++)
+            arr[i] = k.next();
+        for (int i = 0; i < n; i++)
+            hash.put(i,arr[i]);
+        System.out.println("Displaying values using Iterator");
+        Iterator it = hash.values().iterator();
+        while (it.hasNext()) {
+            String s = (String) it.next();
+            System.out.print(s + ",");
+        }
+            System.out.println();
+            System.out.println("Displaying keys using Iterator");
+            Iterator it1=hash.keySet().iterator();
+            while(it1.hasNext()){
+                Integer I=(Integer) it1.next();
+                System.out.print(I+",");
+            }
+        }
+    }
+    Output:
+ Enter size of array
+4
+Enter elements in array
+2
+4
+5
+6
+Displaying values using Iterator
+2,4,5,6,
+Displaying keys using Iterator
+0,1,2,3,
+Process finished with exit code 0
+    
+    
