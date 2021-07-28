@@ -32,10 +32,12 @@ int sum=0;
 String ab[]=br.readLine().trim().split("\\s+");
 l = Integer.parseInt(ab[0]);
 r = Integer.parseInt(ab[1]);
-for(int i=l;i<=r;i++)
+int i=l;
+while(i<=r)
 {
-if(prime[i]==true) 
+if(prime[i]) 
 sum+=i;
+i++;
 }
 System.out.println(sum);
 sum=0;
