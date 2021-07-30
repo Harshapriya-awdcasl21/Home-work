@@ -7,31 +7,50 @@ import java.util.regex.*;
 public class Solution {
 
     public static void main(String[] args) {
-           Scanner k= new Scanner(System.in);
-        int t=k.nextInt();
-        int arr[]= new int[t];
-        for(int i=0;i<t;i++)
+        
+          Scanner k= new Scanner(System.in);
+        int r=k.nextInt();
+        int arr[]= new int[r];
+        for(int i=0;i<r;i++)
             arr[i]=k.nextInt();
-        for(int i=0;i<t;i++)
+        for(int i=0;i<r;i++)
             sieve(arr[i]);
     }
     static void sieve(int n){
         int N=1000000;
-        int prime[]=new int[N+1];
+        boolean prime[]=new boolean[N+1];
         for(int i=0;i<=N;i++)
-            prime[i]=1;
-        prime[0]=0;
-        prime[1]=0;
+            prime[i]=true;
+        prime[0]=false;
+        prime[1]=false;
         for(int i=2;i*i<=N;i++){
-            if(prime[i]==1){
+            if(prime[i]){
                 for(int j=i*i;j<=N;j+=i)
-                    prime[j]=0;
+                    prime[j]=false;
             }
         }
-        if(prime[n]==1)
+        if(prime[n])
             System.out.println("Yes");
             else
               System.out.println("No");  
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
     }
 }
+ 
+ output:
+ Input (stdin)
+
+3
+2
+4
+5
+Your Output (stdout)
+
+Yes
+No
+Yes
+Expected Output
+
+Yes
+No
+Yes
