@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class primefactor {
+     static int[] prime =new int [100005];
+    static void Prime(){
+        for(int i=0;i<100005;i++)
+        {
+            prime[i]=i;
+        }
+        prime[0]=1;
+        prime[1]=1;
+        for(int i=2;i*i<100005;i++)
+        {
+            if(prime[i]==i) {
+                for (int j = i * i; j < 100005; j += i) {
+                    prime[j] = i;
+                }
+            }
+        }
+    }
+    public static void main(String []ard)
+    {
+        Scanner k=new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int N=k.nextInt();
+        int n;
+        int r=0;
+        Prime();
+        while(N!=1)
+        {
+            n=prime[N];
+            r++;
+            N=N/prime[N];   
+        }
+        System.out.println(r);
+    }
+}
+Output:
+Enter the number:
+225
+4
+
+Process finished with exit code 0
