@@ -1,0 +1,32 @@
+class Solution {
+    public boolean isUgly(int n) {
+         if(n<=0)
+            return false;
+        int prime[]= new int[n+1];
+     for(int i=1;i<=n;i++)
+         prime[i]=i;
+        for(int i=2;i*i<=n;i++){
+            if(prime[i]==i){
+                for(int j=i*i;j<=n;j+=i)
+                    prime[j]=i;
+            }
+        }
+        while(n>0){
+            if(prime[n]>5)return false;
+            n=n/prime[n];
+            if(n==1) break;
+        }
+     return true;
+    }
+}
+
+
+Output:
+Accepted
+Runtime: 0 ms
+Your input
+6
+Output
+true
+Expected
+true
