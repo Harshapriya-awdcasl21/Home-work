@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class nextprime {
+        static  boolean []prime=new boolean[2^31+1];
+       // static  boolean []p=new boolean[2^31];
+        static void seive()
+        {
+            for(int i=0;i< prime.length;i++)
+            {
+                prime[i]=true;
+            }
+            prime[0]=false;
+            prime[1]=false;
+            for(int i=2;i*i< prime.length;i++)
+            {
+                if(prime[i]) {
+                    for (int j = i * i; j < prime.length; j += i)
+                    {
+                        prime[j] = false;
+                    }
+                }
+            }
+        }
+        public static void main(String[] ar)
+        {
+            Scanner k = new Scanner(System.in);
+            System.out.println("Enter a number:");
+            int n = k.nextInt();
+            seive();
+            for (int i=n;i<=n;i++)
+            {
+              if(prime[n])
+               {
+                System.out.println(n);
+                break;
+               }
+              n++;
+           }
+        }
+}
+
+
+Output:
+Enter a number:
+27
+29
+
+Process finished with exit code 0
