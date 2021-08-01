@@ -1,0 +1,86 @@
+import java.util.Scanner;
+
+public class largestprime{
+
+    static int num=50000;
+
+    static int prime[]=new int[num+1];
+
+    static void sieve() {
+
+        for (int i = 0; i <= num; i++)
+
+            prime[i]=1;
+
+        prime[0]=0;
+
+        prime[1]=0;
+
+        for(int p=2;p*p<=num;p++){
+
+            if(prime[p]==1){
+
+                for(int j=p*p;j<=num;j+=p)
+
+                    prime[j]=0;
+
+            }
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        int max=Integer.MIN_VALUE;
+
+        Scanner sc= new Scanner(System.in);
+
+        sieve();
+
+        System.out.println("Enter array length");
+
+        int n=sc.nextInt();
+
+        System.out.println("Enter array values");
+
+        int arr[]=new int[n];
+
+        for(int i=0;i<n;i++)
+
+            arr[i]=sc.nextInt();
+
+        for(int i=0;i<n;i++){
+
+            if(arr[i]>max && prime[arr[i]]==1)
+
+                max=arr[i];
+
+        }
+
+        System.out.println("Largest prime number is :"+max);
+
+    }
+
+}
+
+
+
+
+Output:
+
+Enter array length
+
+3
+
+Enter array values
+
+3
+
+4
+
+5
+
+Largest prime number is :5
+
+Process finished.
