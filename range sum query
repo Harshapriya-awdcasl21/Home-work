@@ -1,0 +1,28 @@
+class NumArray {
+public static int []nums=new int [1000000];
+    public static int []num=new int [1000000];
+    public NumArray(int[] nums) {
+        num[0]=nums[0];
+        for(int i=1;i<nums.length;i++)
+        num[i]=num[i-1]+nums[i];
+    }
+    
+    public int sumRange(int left, int right) {
+        int result;
+        if(left==0)
+          result= num[right];
+        else
+         result=num[right]-num[left-1];
+        return result;
+    }
+}
+Output:
+Accepted
+Runtime: 8 ms
+Your input
+["NumArray","sumRange","sumRange","sumRange"]
+[[[-2,0,3,-5,2,-1]],[0,2],[2,5],[0,5]]
+Output
+[null,1,-1,-3]
+Expected
+[null,1,-1,-3]
