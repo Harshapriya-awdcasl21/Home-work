@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class sumofeve {
+    public static void main(String ar[])
+    {
+        Scanner k=new Scanner(System.in);
+        int arr[]=new int[1001];
+        int eve[]=new int[1001];
+        int prefix[]=new int[1001];
+        for (int i=0;i<1001;i++)
+        {
+            arr[i]=i;
+            eve[i]=arr[i]+arr[i];
+        }
+        prefix[0]=eve[0];
+        for (int i=1;i<1001;i++)
+        {
+            prefix[i]=prefix[i-1]+eve[i];
+        }
+        System.out.println("Enter number of test cases:");
+        int t=k.nextInt();
+        int n;
+        while(t>0)
+        {
+            System.out.println("Enter a number upto which even sum has to be printed:");
+            n= k.nextInt();
+            System.out.println(prefix[n]);
+            t--;
+        }
+    }
+}
+Output:
+Enter number of test cases:
+3
+Enter a number upto which even sum has to be printed:
+4
+20
+Enter a number upto which even sum has to be printed:
+10
+110
+Enter a number upto which even sum has to be printed:
+20
+420
+
+Process finished with exit code 0
