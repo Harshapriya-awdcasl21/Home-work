@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class binary{
+    static Scanner k= new Scanner(System.in);
+    public static void main(String[] args) {
+        System.out.println("Enter array size");
+        int n=k.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter array elements");
+        for(int i=0;i<n;i++)
+            arr[i]=k.nextInt();
+        System.out.println("Enter the element to search:");
+        int t=k.nextInt();
+        binarysearch(t,arr);
+    }
+    static void binarysearch(int t,int[] arr){
+        int n=arr.length;
+        int low=0,high=n-1;
+        while(low<=high){
+            int mid=(low+high)/2;
+            if(arr[mid]==t){
+                System.out.println("found at "+mid+" index ");
+                return;
+            }
+            else if(t<arr[mid])
+                high=mid-1;
+            else
+                low=mid+1;
+        }
+        System.out.println("not found");
+    }
+}
+Output 1:
+Enter array size
+6
+Enter array elements
+1
+2
+3
+4
+5
+6
+Enter the element to search:
+5
+found at 4 index 
+
+Process finished with exit code 0
+Output 2:
+Enter array size
+6
+Enter array elements
+1
+2
+3
+4
+5
+6
+Enter the element to search:
+7
+not found
+
+Process finished with exit code 0
