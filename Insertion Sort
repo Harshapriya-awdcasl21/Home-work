@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class insertionsort {
+    static void print(int[] arr) {
+        for (int i : arr)
+            System.out.print(i + " ");
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Scanner k=new Scanner(System.in);
+        System.out.println("Enter array size:");
+        int n= k.nextInt();
+        int[] arr =new int[n];
+        System.out.println("Enter array Elements:");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=k.nextInt();
+        }
+        System.out.println("Array before sorting");
+        print(arr);
+        insertion(arr);
+        System.out.println("Array After sorting");
+        print(arr);
+    }
+
+    static void insertion(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int temp = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > temp) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = temp;
+        }
+    }
+}
+
+Output:
+Enter array size:
+6
+Enter array Elements:
+9
+6
+11
+6
+5
+77
+Array before sorting
+9 6 11 6 5 77 
+Array After sorting
+5 6 6 9 11 77 
+
+Process finished with exit code 0
