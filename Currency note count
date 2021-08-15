@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class currencynote {
+    public static void main(String[] args)
+    {
+        Scanner k=new Scanner(System.in);
+        System.out.print("Enter amount: ");
+        int amount=k.nextInt();
+        notes(amount);
+    }
+    public static void notes(int amount)
+    {
+        int[] type =new int[]{2000,1000,500,200,100,50,20,10,5,1};
+        for (int j : type) {
+            int c = 0;
+            if (amount >= j) {
+                c = amount / j;
+                amount = amount - c * j;
+            }
+            if (c != 0)
+                System.out.println(j + " : " + c);
+        }
+    }
+}
+Output:
+Enter amount: 800
+500 : 1
+200 : 1
+100 : 1
+
+Process finished with exit code 0
