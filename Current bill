@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class currentbill {
+    public static double calculateBill(double units)
+    {
+        if (units <= 100)
+            return units * 3.25;
+        else if (units <= 200)
+            return (100 * 3.25) + (units - 100) * 5.63;
+        else if (units <= 300)
+            return (100 * 3.25) + (100 * 5.63) + (units - 200) * 6.88;
+        else if (units <= 400)
+            return (100 * 3.25) + (100 * 5.63) +(100*6.88) + (units - 300) * 7.38;
+        else if (units <= 500)
+            return (100 * 3.25) + (100 * 5.63) +(100*6.88) +(100*7.38) + (units - 400) * 7.88;
+        else if (units > 500)
+            return (100 * 3.25) + (100 * 5.63) + (100 * 6.88) +(100*7.38) +(100*7.88) + (units - 500) * 8.38;
+        return 0;
+    }
+    public static void main(String[] args)
+    {
+        Scanner k=new Scanner(System.in);
+        System.out.println("Enter the number of units:");
+        double units=k.nextDouble();
+        System.out.println("Rs "+calculateBill(units));
+    }
+}
+Output:
+Enter the number of units:
+300
+Rs 1576.0
+
+Process finished with exit code 0
